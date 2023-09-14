@@ -67,7 +67,7 @@ def get_reply(text, messages):
         reply += response.choices[0].delta.get("content", "")
 
     return reply
-st.title("VIDHAN :  THE LEGAL BOT")
+st.title("VIDHAN :  THE LEGAL BOT ")
 # Create a radio button to choose the chat mode
 chat_mode = st.radio("Select Chat Mode:", ("PDF Chat", "LegalBot"))
 # Initialize chat history
@@ -145,7 +145,7 @@ elif chat_mode == "LegalBot":
 
     if prompt:
         ans = get_reply(prompt, st.session_state.messages)
-        response = f"Echo: {ans}"
+        response = f"Bot: {ans}"
         # Display assistant response in chat message container
         with st.chat_message("assistant"):
             st.markdown(response)
