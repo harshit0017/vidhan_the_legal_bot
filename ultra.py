@@ -69,7 +69,7 @@ def get_reply(text, messages):
     return reply
 st.title("VIDHAN :  THE LEGAL BOT ")
 # Create a radio button to choose the chat mode
-chat_mode = st.radio("Select Chat Mode:", ("PDF Chat", "LegalBot"))
+chat_mode = st.radio("Select Chat Mode:", ("Legal Document Review", "LegalBot"))
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -80,9 +80,9 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 
-if chat_mode == "PDF Chat":
+if chat_mode == "Legal Document Review":
     # PDF Chat Logic
-    pdf = st.file_uploader("Upload your PDF", type="pdf")
+    pdf = st.file_uploader("Upload your PDF for review", type="pdf")
 
     if pdf is not None:
         pdf_reader = PdfReader(pdf)
