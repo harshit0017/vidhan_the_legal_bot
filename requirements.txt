@@ -5,3 +5,4 @@ faiss-cpu
 tiktoken
 openai
 transformers 
+python-dotenv
